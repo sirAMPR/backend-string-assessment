@@ -43,9 +43,9 @@ def verbing(s):
 
 def not_bad(s):
     # your code here
-    if s.find('bad') > s.find('not'):
-        return s.replace(s[s.find('not'):s.find('bad')+3], 'good')
-    return s
+    i = s.find('bad')
+    j = s.find('not')
+    return s.replace(s[j:i+3], 'good') if i > j else s
 
 
 # F. front_back
